@@ -1,5 +1,5 @@
 // This is the data we will be using, study it but don't change anything, yet.
-
+// console.log(document)
 let menuItems = [
   'Students',
   'Faculty',
@@ -10,9 +10,17 @@ let menuItems = [
 ];
 
 
-function menuMaker(arr) {
-
-}.
+const menuMaker = function (arr) {
+  for (let i = 0; i < arr; i++) {
+    document.createElement("li");
+  }
+  const menuButton = document.querySelector("div .menu-button")
+  
+  menuButton.addEventListener("click", (event) => {
+      if (event.target === open) {
+        console.log('you can read this menu')
+      }
+    })}
 /* 
   Step 1: Write a component called 'menuMaker' to create a menu like the markup below:
 
