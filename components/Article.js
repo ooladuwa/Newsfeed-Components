@@ -13,7 +13,14 @@ function articleMaker(obj) {
   const expandButton = document.createElement("span");
 
   // set up structure of new elements
-  article.append(title, date, firstParagraph, secondParagraph, thirdParagraph, expandButton);
+  article.append(
+    title,
+    date,
+    firstParagraph,
+    secondParagraph,
+    thirdParagraph,
+    expandButton
+  );
 
   // assign classes to new elements
   article.classList.add("article");
@@ -27,19 +34,19 @@ function articleMaker(obj) {
   firstParagraph.textContent = obj.firstParagraph;
   secondParagraph.textContent = obj.secondParagraph;
   thirdParagraph.textContent = obj.thirdParagraph;
-  expandButton.textContent = 'Click Here';
+  expandButton.textContent = "Click Here";
 
   // add event listener(step 3)
   expandButton.addEventListener("click", () => {
-    article.classList.toggle("article-open")
-  })
+    article.classList.toggle("article-open");
+  });
 
-return article
+  return article;
 }
-  // iterate over data and create new articles and append to DOM
-data.forEach(item => {
-  articles.append(articleMaker(item))
-})
+// iterate over data and create new articles and append to DOM
+data.forEach((item) => {
+  articles.append(articleMaker(item));
+});
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,
